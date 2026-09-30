@@ -1,0 +1,256 @@
+/*
+======================================================================
+  Assignment : Introduction to Variables and Datatypes
+  Part I : Variables (let, var, const)
+======================================================================
+*/
+
+// ===================================================================
+// Part a — 4 Questions
+// ===================================================================
+
+/*
+----------------------------------------------------------------------
+Question 1: Personal Information
+Declare variables for `name`, `age`, and `city` using appropriate 
+variable keywords. Assign values and print all three variables.
+----------------------------------------------------------------------
+*/
+const name = "Alex";
+let age = 16;
+const city = "Mumbai";
+
+console.log("--- Question 1 ---");
+console.log("Name:", name);
+console.log("Age:", age);
+console.log("City:", city);
+
+
+/*
+----------------------------------------------------------------------
+Question 2: Change the Score
+Create a variable `score` with the value `50`. Change its value to `80` 
+and print the final value. Use the appropriate keyword for a value 
+that can change.
+----------------------------------------------------------------------
+*/
+let score = 50;
+score = 80;
+
+console.log("\n--- Question 2 ---");
+console.log("Final Score:", score);
+
+
+/*
+----------------------------------------------------------------------
+Question 3: Constant Value
+Create a constant variable `PI` with the value `3.14`. Print its value. 
+Do not try to change the value.
+----------------------------------------------------------------------
+*/
+const PI = 3.14;
+
+console.log("\n--- Question 3 ---");
+console.log("Value of PI:", PI);
+
+
+/*
+----------------------------------------------------------------------
+Question 4: Uninitialized Variables
+Declare one variable having name `num1` using `var` and one having name 
+`num2` using `let` without assigning values. Print both variables. 
+Then assign values to them and print the values again.
+----------------------------------------------------------------------
+*/
+var num1;
+let num2;
+
+console.log("\n--- Question 4 ---");
+console.log("num1 before assignment:", num1); // undefined
+console.log("num2 before assignment:", num2); // undefined
+
+num1 = 15;
+num2 = 25;
+
+console.log("num1 after assignment:", num1);
+console.log("num2 after assignment:", num2);
+
+
+// ===================================================================
+// Part b — 4 Questions
+// ===================================================================
+
+/*
+----------------------------------------------------------------------
+Question 5: Choose the Correct Keyword
+Create the following variables using the most appropriate keyword:
+- `studentName` — the value will not change
+- `marks` — the value may change
+- `schoolName` — the value will not change
+
+Assign values to all three variables. Change `marks` and print all variables.
+----------------------------------------------------------------------
+*/
+const studentName = "Aarav";
+let marks = 85;
+const schoolName = "Greenwood High";
+
+marks = 92;
+
+console.log("\n--- Question 5 ---");
+console.log("Student Name:", studentName);
+console.log("Updated Marks:", marks);
+console.log("School Name:", schoolName);
+
+
+/*
+----------------------------------------------------------------------
+Question 6: Understand Scope
+Write a program where `var`, `let`, and `const` variables are declared 
+inside an `if` block. Try to access all three variables outside the block. 
+Observe and identify which variables can be accessed.
+----------------------------------------------------------------------
+*/
+console.log("\n--- Question 6 ---");
+if (true) {
+    var varScoped = "var is accessible outside block";
+    let letScoped = "let is block scoped";
+    const constScoped = "const is block scoped";
+}
+
+console.log(varScoped); // Accessible because var is not block-scoped
+
+// Note:
+// console.log(letScoped);   // Throws ReferenceError: letScoped is not defined
+// console.log(constScoped); // Throws ReferenceError: constScoped is not defined
+
+
+/*
+----------------------------------------------------------------------
+Question 7: Test Re-declaration
+Declare a variable named `user` using `var` and declare it again with 
+a different value. Then perform the same experiment using `let`. 
+Observe what happens and identify which declaration allows re-declaration.
+----------------------------------------------------------------------
+*/
+console.log("\n--- Question 7 ---");
+
+// Testing var: Allowed
+var user = "Alice";
+var user = "Bob";
+console.log("User declared with var:", user);
+
+// Testing let: Not allowed
+let member = "Charlie";
+// let member = "David"; // Throws SyntaxError: Identifier 'member' has already been declared
+
+
+/*
+----------------------------------------------------------------------
+Question 8: Test Re-assignment
+Create three variables using `var`, `let`, and `const`. Assign an initial 
+value to each. Try to change the value of all three variables. Observe 
+which variables allow re-assignment and which one produces an error.
+----------------------------------------------------------------------
+*/
+console.log("\n--- Question 8 ---");
+
+var val1 = 10;
+val1 = 20; // Allowed
+
+let val2 = 30;
+val2 = 40; // Allowed
+
+const val3 = 50;
+// val3 = 60; // Throws TypeError: Assignment to constant variable
+
+console.log("var value after re-assignment:", val1);
+console.log("let value after re-assignment:", val2);
+console.log("const value:", val3);
+
+
+// ===================================================================
+// Part c — 2 Questions
+// ===================================================================
+
+/*
+----------------------------------------------------------------------
+Question 9: Predict and Explain
+Without running the code, predict the output of each `console.log()` 
+and identify which lines cause errors. Explain your answer using the 
+rules of scope, re-assignment, and variable declaration.
+
+Code given:
+var x = 10;
+if (true) {
+    var x = 20;
+    let y = 30;
+    const z = 40;
+}
+console.log(x);
+console.log(y);
+console.log(z);
+----------------------------------------------------------------------
+Prediction and Explanation:
+1. `console.log(x)` -> Outputs: 20
+   Explanation: `var` is function/global scoped, not block scoped. 
+   Inside the `if` block, `var x = 20` re-declares and overwrites 
+   the global `x`.
+
+2. `console.log(y)` -> Throws: ReferenceError: y is not defined
+   Explanation: `let` is block scoped and only exists within the 
+   `if` statement's `{}` block.
+
+3. `console.log(z)` -> Execution stops at line 2 error, but would throw: 
+   ReferenceError: z is not defined
+   Explanation: `const` is also block scoped and inaccessible outside `{}`.
+----------------------------------------------------------------------
+*/
+
+
+/*
+----------------------------------------------------------------------
+Question 10: Fix the Program
+The following program contains multiple errors. Fix the code so that 
+it runs correctly. Make sure your solution follows the rules for 
+initialization, re-declaration, re-assignment, and scope.
+
+Code to fix:
+const name;
+let age = 20;
+let age = 25;
+if (true) {
+    var city = "Delhi";
+    let country = "India";
+}
+console.log(country);
+const score = 50;
+score = 80;
+----------------------------------------------------------------------
+*/
+console.log("\n--- Question 10 (Fixed Code) ---");
+
+// Fix 1: Initialize `const` at declaration
+const fixedName = "Priya";
+
+// Fix 2: Re-assign `let` instead of re-declaring it
+let fixedAge = 20;
+fixedAge = 25;
+
+// Fix 3: Declare `country` outside block so it is accessible to outer console.log
+let fixedCountry;
+if (true) {
+    var fixedCity = "Delhi";
+    fixedCountry = "India";
+}
+
+console.log("City:", fixedCity);
+console.log("Country:", fixedCountry);
+
+// Fix 4: Use `let` instead of `const` because the value needs to change
+let fixedScore = 50;
+fixedScore = 80;
+
+console.log("Name:", fixedName);
+console.log("Age:", fixedAge);
+console.log("Score:", fixedScore);
