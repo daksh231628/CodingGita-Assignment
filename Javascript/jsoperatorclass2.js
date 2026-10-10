@@ -239,3 +239,72 @@ console.log(num);
 
 5.
 0.5
+C] Comparison Operators
+
+
+1. Loose Equality ==
+1. Check whether the string "25" is loosely equal to the number 25.
+"25" == 25 -> true
+
+2. Check if 0 == false returns true or false.
+0 == false -> true
+
+3. Predict the output: console.log(10 == "10"); console.log(null == undefined);
+Output: true, true
+
+4. Predict the output: console.log("" == 0); console.log([] == false);
+Output: true, true
+
+5. Why does NaN == NaN return false?
+NaN is never equal to anything, not even itself, by IEEE 754 standards.
+
+
+2. Loose Inequality !=
+1. Check whether "18" != 18 returns true or false.
+"18" != 18 -> false
+
+2. A password is stored as "1234". User enters 1234 (number). Will != return true?
+false (they are loosely equal, so inequality is false)
+
+3. Predict the output: console.log(5 != "5"); console.log(0 != false);
+Output: false, false
+
+4. Predict the output: console.log(null != undefined); console.log("" != 0);
+Output: false, false
+
+5. What does NaN != NaN return? Explain.
+true (NaN is not equal to NaN)
+
+
+3. Strict Equality ===
+1. Check whether "25" === 25 returns true or false. Explain why.
+false (Strict equality checks data types. "25" is a string, 25 is a number).
+
+2. Check if 0 === false and null === undefined.
+0 === false -> false, null === undefined -> false
+
+3. Predict the output: console.log(10 === "10"); console.log(true === 1);
+Output: false, false
+
+4. Predict the output: console.log("" === 0); console.log([] === false);
+Output: false, false
+
+5. Why is === preferred over == in most real-world code?
+It prevents unexpected, silent type coercion bugs.
+
+
+4. Strict Inequality !==
+1. Check whether "18" !== 18 returns true or false.
+true (Since their types are different, they are strictly not equal).
+
+2. Check if 0 !== false and null !== undefined.
+0 !== false -> true, null !== undefined -> true
+
+3. Predict the output: console.log(5 !== "5"); console.log(true !== 1);
+Output: true, true
+
+4. Predict the output: console.log("" !== 0); console.log(NaN !== NaN);
+Output: true, true
+
+5. Write a condition that checks if a variable input is strictly not equal to the string "0".
+input !== "0"
