@@ -308,3 +308,131 @@ Output: true, true
 
 5. Write a condition that checks if a variable input is strictly not equal to the string "0".
 input !== "0"
+
+
+// Part=c (relational operator)
+// 5. Greater Than>
+1.A student’s marks are 78. The passing marks are 40. Check whether the student has scored more than the passing marks.
+  Ans. 
+  let marks=78;
+  let passingmarks=40;
+  console.log(marks>passingmarks)
+
+  2.Temperature today is 35°C and yesterday it was 28°C. Check if today is hotter.
+    Ans.
+     let todaytemp=35;
+    let yesterdaytemp=28;
+    console.log(todaytemp>yesterdaytemp)
+        
+3.Predict the output:
+console.log(15 > 10);
+console.log(10 > 15);
+console.log(10 > 10);
+Ans.
+  1. TRUE
+  2  False
+  3. False
+
+4. Predict the output:
+  console.log("20" > 15);
+  console.log("5" > "10");
+  console.log("abc" > 10);
+Ans. 
+  1. True
+  2. True
+  3. False
+
+5.What is the result of null < 0 and undefined < 0? Explain.
+  Ans.the resutis 
+       False
+       False
+6.A shop has 120 items in stock. A customer wants to buy 85 items. Write a condition using > to check if stock is sufficient.
+  Ans.let stock=120;
+      let customerwants=85;
+      console.log(stock>customerwants)
+      TRUE
+7.Predict and explain:
+  console.log(true > false);
+  console.log("10" > "2");
+  console.log(NaN > 5);
+Ans. True
+     False
+     False
+
+// 6.LESS THAN(<) 
+1.A box can hold maximum 50 kg. Current weight is 42 kg. Check if more items can still be added.
+  Ans.let maxweight=50
+      let currentweight=42
+      console.log(currentweight<maxweight)
+      TRUE
+2.Age of a person is 16. Minimum age required is 18. Check if the person is underage.
+  Ans.let age = 16;
+      let minimumAge = 18;
+      console.log(age<minimumAge)
+      TRUE
+3.Predict the output:
+  console.log("8" < 10);
+  console.log("20" < "3");
+  console.log("hello" < 5);
+Ans. True
+     True
+     False
+4.Predict the output:
+  console.log("8" < 10);
+  console.log("20" < "3");
+  console.log("hello" < 5);
+Ans. True
+     True
+     False
+6.A tank capacity is 500 litres. Current water level is 375 litres. Write a condition using < to check if it is not full.
+  Ans. let capacity=500;
+       let currentlevel=375;
+       console.log(currentlevel<capacity)
+        =>TRUE
+7.Predict and explain:
+  console.log(false < true);
+  console.log("5" < "15");
+  console.log(NaN < 10);
+Ans.True
+    False
+    False
+
+7.Greater Than or Equal To >=
+  1.Minimum marks required for distinction is 75. A student scored 75. Check if the student gets distinction.
+  Ans.let minmarks=75
+      let scored=75
+      console.log(minmarks>= scored)
+      TRUE
+ 2.Ticket price is ₹300. A person has ₹300. Check if they can buy the ticket.
+Ans.let ticketprice=300
+    let personhas=300
+    console.log(ticketprice>=personhas)
+    TRUE
+3.Predict the output:
+  console.log(25 >= 25);
+  console.log(30 >= 25);
+  console.log(20 >= 25);
+Ans.TRUE
+    TRUE
+    FALSE
+4.Predict the output:
+  console.log("25" >= 25);
+  console.log("10" >= "2");
+  console.log(null >= 0);
+Ans. TRUE
+     FALSE
+     TRUE
+5.What is the result of undefined >= 0? Explain.
+  Ans.FALSE
+6.A lift can carry maximum 8 people. Currently 8 people are inside. Write a condition using >= to check if the lift is full or overloaded.
+  let max=8
+  let inside=8
+  console.log(max>=inside)
+  TRUE
+7.Predict and explain:
+  console.log(true >= 1);
+  console.log("" >= 0);
+  console.log(NaN >= NaN);
+Ans.TRUE
+    TRUE
+    FALSE
