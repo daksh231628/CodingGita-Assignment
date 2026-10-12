@@ -502,33 +502,102 @@ Ans.True
 
 // Part E]: Increment / Decrement Operators (++ / --)
     PartA:
-// 1. Counter starts at 5, increment by 1
-    Ans.let counter = 5;
-        counter++;
-        console.log("1. Counter:", counter);
-        Counter:6
+        1. Counter starts at 5, increment by 1
+            Ans.let counter = 5;
+                counter++;
+                console.log("1. Counter:", counter);
+                Counter:6
+        
+        2. Player has 3 lives, decrement by 1
+            Ans.let lives = 3;
+                lives--;
+                console.log("2. Lives:", lives);
+                Lives:2
+        
+        3. Score = 10, increase using ++
+            Ans.let score = 10;
+                score++;
+                console.log("3. Score:", score);
+                Scores:11
+        
+        4. Items = 8, decrease using --
+            Ans.let items = 8;
+              items--;
+              console.log("4. Items:", items);
+              Items:7
+        
+        5. Count = 0, increment twice
+            Ans.let count = 0;
+                count++;
+                count++;
+                console.log("5. Final Count:", count);
+                Final Count:2
+    Part B:
+        6.Start with x = 5.
+          Create y = x++
+          Print both x and y.
+          Explain why the values are different.
+            Ans.let x = 5;
+                let y = x++;
+                console.log("x:", x); // 6
+                console.log("y:", y); // 5
+        7.Start with a = 5.
+          Create b = ++a
+          Print both a and b.
+          Explain the difference from the previous question.
+            Ans.let a = 5;
+                let b = ++a;
+                console.log("a:", a); // 6
+                console.log("b:", b); // 6
+        8.Start with lives = 3.
+          Use post-decrement (lives--) and store the result in previousLives.
+          Print both variables.
+            Ans.let lives = 3;
+                let previousLives = lives--;
+                console.log("lives:", lives);                 // 2
+                console.log("previousLives:", previousLives); // 3
+       9.Start with attempts = 0.
+         Use pre-increment (++attempts) and store the result in currentAttempts.
+         Print both variables.
+           Ans.let attempts = 0;
+                let currentAttempts = ++attempts;
+                console.log("attempts:", attempts);               // 1
+                console.log("currentAttempts:", currentAttempts); // 1
+       10.Start with points = 100.
+          Increase it using ++
+          Then decrease it using --
+          Print the final value.
+            Ans.let points = 100;
+                ++points; // points becomes 101
+                --points; // points becomes 100
+                console.log("final points:", points); // 100
+   Part C:
+      11.Predict the output:
+         let x = 10;
+         let y = x++;
+         let z = ++x;
+         console.log(x, y, z);
+          Ans.12,10,12
+      12.Predict the output:
+         let a = 5;
+         let b = a-- + ++a;
+         console.log(a, b);
+          Ans.5,10
 
-// 2. Player has 3 lives, decrement by 1
-    Ans.let lives = 3;
-        lives--;
-        console.log("2. Lives:", lives);
-        Lives:2
+      13.Predict the output:
+         let m = 7;
+         let n = --m + m++;
+         console.log(m, n);
+          Ans.7,12
+         
+      14.Predict the output:
+         let p = 3;
+         let q = p++ + ++p + p;
+         console.log(p, q);
+          Ans.5,13
+      15.Predict the output:
+         let val = 0;
+         val = val++ + ++val;
+         console.log(val);
+          Ans.2
 
-// 3. Score = 10, increase using ++
-    Ans.let score = 10;
-        score++;
-        console.log("3. Score:", score);
-        Scores:11
-
-// 4. Items = 8, decrease using --
-    Ans.let items = 8;
-      items--;
-      console.log("4. Items:", items);
-      Items:7
-
-// 5. Count = 0, increment twice
-    Ans.let count = 0;
-        count++;
-        count++;
-        console.log("5. Final Count:", count);
-        Final Count:2
