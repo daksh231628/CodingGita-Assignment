@@ -505,32 +505,32 @@ Ans.True
         1. Counter starts at 5, increment by 1
             Ans.let counter = 5;
                 counter++;
-                console.log("1. Counter:", counter);
+                console.log("Counter:", counter);
                 Counter:6
         
         2. Player has 3 lives, decrement by 1
             Ans.let lives = 3;
                 lives--;
-                console.log("2. Lives:", lives);
+                console.log("Lives:", lives);
                 Lives:2
         
         3. Score = 10, increase using ++
             Ans.let score = 10;
                 score++;
-                console.log("3. Score:", score);
+                console.log("Score:", score);
                 Scores:11
         
         4. Items = 8, decrease using --
             Ans.let items = 8;
               items--;
-              console.log("4. Items:", items);
+              console.log("Items:", items);
               Items:7
         
         5. Count = 0, increment twice
             Ans.let count = 0;
                 count++;
                 count++;
-                console.log("5. Final Count:", count);
+                console.log("Final Count:", count);
                 Final Count:2
     Part B:
         6.Start with x = 5.
