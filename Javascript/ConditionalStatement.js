@@ -486,4 +486,417 @@ if (year % 4 == 0) {
 }
 
 
+// ==================================================================
+### E] `switch` Statement – 10 Questions
+
+1. Write a program that takes a month number (1–12) and prints the number of days in that month using `switch`  
+   (Hint: Consider 28/29 for February as 28 for simplicity).
+
+2. Write a program that checks a character and prints whether it is a vowel or consonant using `switch`.
+
+3. Create a program that takes a number from 1 to 4 and prints the season using multiple cases together:  
+   1 or 2 → Winter  
+   3 or 4 → Summer
+
+4. Write a program using `switch (true)` to assign class based on marks:  
+   ≥ 75 → Distinction  
+   ≥ 60 → 1st class  
+   ≥ 50 → 2nd class  
+   ≥ 35 → 3rd class  
+   below 35 → Failed
+
+5. Create a nested `switch` program:  
+   First take a role (“admin” or “user”).  
+   If role is “admin”, then take an action (“create”, “edit”, “delete”) and print the corresponding message.  
+   If role is “user”, print “Limited Access”.
+
+6. Predict and explain the output of the following code. Then correct it so that only one message is printed:
+```js
+let fruit = "mango";
+
+switch (fruit) {
+  case "apple":
+    console.log("Apple is red");
+  case "mango":
+    console.log("Mango is yellow");
+  case "banana":
+    console.log("Banana is yellow");
+  default:
+    console.log("Unknown fruit");
+}
+```
+
+7. Write a program that takes a value which can be either a number or a string (`0`, `"0"`, `false`, `null`, `undefined`) and uses `switch` to correctly identify each one. Explain why some values may not match as expected.
+
+8. Create a tricky calculator using `switch` that supports these operations:  
+   `+`, `-`, `*`, `/`, `%`, and also `**` (exponentiation).  
+   Handle division by zero properly inside the corresponding case.
+
+9. Write a program using `switch` that takes a date (day number of the month) and prints:  
+   “Beginning of the month” (1–10)  
+   “Middle of the month” (11–20)  
+   “End of the month” (21–31)  
+   Use `switch (true)` technique for range checking.
+
+10. Create a multi-level nested `switch` program for an online food ordering system:  
+    First select Category: `"veg"` or `"nonveg"`.  
+    Then select Item based on category.  
+    Finally select Size: `"half"` or `"full"` and print the final order summary with price.
+
+---
+// =======================================================================
+  Answer:==
+Q1.
+
+let month = 4;
+
+switch (month) {
+    case 1:
+        console.log("31 days");
+        break;
+
+    case 2:
+        console.log("28 days");
+        break;
+
+    case 3:
+        console.log("31 days");
+        break;
+
+    case 4:
+        console.log("30 days");
+        break;
+
+    case 5:
+        console.log("31 days");
+        break;
+
+    case 6:
+        console.log("30 days");
+        break;
+
+    case 7:
+        console.log("31 days");
+        break;
+
+    case 8:
+        console.log("31 days");
+        break;
+
+    case 9:
+        console.log("30 days");
+        break;
+
+    case 10:
+        console.log("31 days");
+        break;
+
+    case 11:
+        console.log("30 days");
+        break;
+
+    case 12:
+        console.log("31 days");
+        break;
+
+    default:
+        console.log("Invalid month");
+}
+
+Q2.
+  let ch = "a";
+
+switch (ch) {
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+    case "A":
+    case "E":
+    case "I":
+    case "O":
+    case "U":
+        console.log("Vowel");
+        break;
+
+    default:
+        console.log("Consonant");
+}
+
+Q3.
+let num = 3;
+
+switch (num) {
+    case 1:
+    case 2:
+        console.log("Winter");
+        break;
+    case 3:
+    case 4:
+        console.log("Summer");
+        break;
+    default:
+        console.log("Invalid number");
+}
+ Q4
+let marks = 78;
+
+switch (true) {
+    case marks >= 75:
+        console.log("Distinction");
+        break;
+
+    case marks >= 60:
+        console.log("1st class");
+        break;
+
+    case marks >= 50:
+        console.log("2nd class");
+        break;
+
+    case marks >= 35:
+        console.log("3rd class");
+        break;
+
+    default:
+        console.log("Failed");
+}
+
+Q5.
+let role = "admin";
+let action = "create";
+
+switch (role) {
+    case "admin":
+        switch (action) {
+            case "create":
+                console.log("create username");
+                break;
+
+            case "edit":
+                console.log("edit username");
+                break;
+
+            case "delete":
+                console.log("delete username");
+                break;
+
+            default:
+                console.log("Invalid action");
+        }
+        break;
+
+    case "user":
+        console.log("Limited access");
+        break;
+
+    default:
+        console.log("Invalid role");
+}
+
+Q6.output==>>
+  mango is yellow
+Q7.
+
+  let value = "0";
+
+switch (value) {
+    case 0:
+        console.log("Number zero");
+        break;
+
+    case "0":
+        console.log("String zero");
+        break;
+
+    case false:
+        console.log("Boolean false");
+        break;
+
+    case null:
+        console.log("Null value");
+        break;
+
+    case undefined:
+        console.log("Undefined value");
+        break;
+
+    default:
+        console.log("Other value");
+}
+q8
+
+let a = 10;
+let b = 3;
+let operator = "**";
+
+switch (operator) {
+    case "+":
+        console.log(a + b);
+        break;
+
+    case "-":
+        console.log(a - b);
+        break;
+
+    case "*":
+        console.log(a * b);
+        break;
+
+    case "/":
+        if (b == 0) {
+            console.log("Cannot divide by zero");
+        } else {
+            console.log(a / b);
+        }
+        break;
+
+    case "%":
+        console.log(a % b);
+        break;
+
+    case "**":
+        console.log(a ** b);
+        break;
+
+    default:
+        console.log("Invalid operator");
+}
+
+q9
+let day = 15;
+
+switch (true) {
+    case day >= 1 && day <= 10:
+        console.log("Beginning of the month");
+        break;
+    case day >= 11 && day <= 20:
+        console.log("Middle of the month");
+        break;
+    case day >= 21 && day <= 31:
+        console.log("End of the month");
+        break;
+    default:
+        console.log("Invalid day");
+}
+q10
+let category = "veg";
+let item = "pizza";
+let size = "full";
+
+switch (category) {
+    case "veg":
+        switch (item) {
+            case "pizza":
+                switch (size) {
+                    case "half":
+                        console.log("Veg Pizza Half: ₹100");
+                        break;
+                    case "full":
+                        console.log("Veg Pizza Full: ₹180");
+                        break;
+                }
+                break;
+        }
+        break;
+    case "nonveg":
+        switch (item) {
+            case "pizza":
+                switch (size) {
+                    case "half":
+                        console.log("Chicken Pizza Half: ₹150");
+                        break;
+                    case "full":
+                        console.log("Chicken Pizza Full: ₹250");
+                        break;
+                }
+                break;
+        }
+        break;
+}
+
   
+  // ======================================================================
+
+### F] Ternary Operator Questions  
+
+
+1. Write a ternary operator to check whether a given number is divisible by 7. If yes, return `"Divisible by 7"`, otherwise `"Not Divisible by 7"`.
+
+2. Using ternary operator, check if the temperature is greater than or equal to 30. Return `"Hot Day"` or `"Pleasant Day"`.
+
+3. Write a ternary expression that checks if a string is empty. Return `"Empty String"` if it is empty, otherwise `"String has content"`.
+
+
+4. Using nested ternary, check a person’s age and return:  
+   - `"Child"` (age < 13)  
+   - `"Teenager"` (13–19)  
+   - `"Adult"` (20 and above)
+
+5. Write a nested ternary to find the greater of three numbers (`a`, `b`, `c`) without using `Math.max`.
+
+6. Create a nested ternary that classifies a student’s marks as:  
+   - `"Distinction"` (≥ 75)  
+   - `"First Class"` (60–74)  
+   - `"Second Class"` (50–59)  
+   - `"Pass"` (35–49)  
+   - `"Fail"` (< 35)
+
+7. Write a single nested ternary expression that returns one of the following based on a number:  
+   `"Positive Even"`, `"Positive Odd"`, `"Negative Even"`, `"Negative Odd"`, or `"Zero"`.
+
+8. Using only nested ternary operators, implement the full leap year logic  
+   (divisible by 4 **and** (not divisible by 100 **or** divisible by 400)) and return `"Leap Year"` or `"Not a Leap Year"`.
+
+9. Convert the following decision tree into **one single nested ternary** expression:  
+   ```
+   if (role === "admin") {
+     if (action === "delete") → "Admin Delete"
+     else if (action === "edit") → "Admin Edit"
+     else → "Admin Other"
+   } else if (role === "user") {
+     if (action === "view") → "User View"
+     else → "User Restricted"
+   } else {
+     → "Invalid Role"
+   }
+   ```
+
+10. Write a complex nested ternary that calculates discount and final amount based on these rules:  
+    - Cart total ≥ 5000 → 20% discount  
+    - Cart total ≥ 2000 → 10% discount  
+    - Cart total ≥ 1000 → 5% discount  
+    - Otherwise → 0% discount  
+    Return both the discount percentage and the final payable amount in a single expression (you may return an object or a formatted string).
+
+    // ==============================================================
+
+  Answes+=>
+      let num=21;
+console.log(num%7==0 ? "divisible by 7":"not divisible by 7");
+q2.
+  let temp=32;
+console.log(temp >= 30 ? "Hot Day" : "Pleasant Day");
+
+Q3.
+  let str="";
+console.log(str==""? "empty string":"String has content");
+
+q4.
+
+    let age = 16;
+console.log(age < 13 ? "Child" : age <= 19 ? "Teenager" : "Adult");
+
+q5.
+
+  
+    
+  
+
+  
+
+
+  
+
+    
