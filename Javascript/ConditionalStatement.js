@@ -888,7 +888,57 @@ q4.
     let age = 16;
 console.log(age < 13 ? "Child" : age <= 19 ? "Teenager" : "Adult");
 
-q5.
+q5.let a=3;
+let b=89;
+let c=8;
+console.log((a>b)?(a>c?a:c):(b>c?b:c));
+
+Q6.
+  let marks=76;
+console.log((marks>=75)?"Distinction":(marks>+60 && marks<=74)?"First Class":(marks>=50 && marks<=59)?"Second Class":(marks>=35 && marks<=49)?"Pass":"fail");
+
+Q7 
+let n = -5;
+
+let result = n == 0 ? "Zero" : n > 0 ? (n % 2 == 0 ? "Positive Even" : "Positive Odd") : (n % 2 == 0 ? "Negative Even" : "Negative Odd");
+
+console.log(result);
+
+Q8
+let year=2026;
+console.log((year%400==0)?"leap year":(year%100!=0)?"not a leap year":(year%4==0)?"leap year":"not a leap year");
+
+Q9
+let role = "admin";
+let action = "delete";
+
+let result = role === "admin"
+    ? (action === "delete" ? "Admin Delete" : action === "edit" ? "Admin Edit" : "Admin Other")
+    : role === "user"
+    ? (action === "view" ? "User View" : "User Restricted")
+    : "Invalid Role";
+
+console.log(result);
+
+Q10
+let total = 3000;
+
+console.log( total >= 5000 ? { discount: "20%", amount: total * 0.8 } : total >= 2000 ? { discount: "10%", amount: total * 0.9 } : total >= 1000 ? { discount: "5%", amount: total * 0.95 } : { discount: "0%", amount: total };
+
+
+
+
+
+
+    
+  
+
+  
+
+
+  
+
+  
 
   
     
