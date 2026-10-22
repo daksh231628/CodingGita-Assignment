@@ -1,0 +1,66 @@
+.nav{
+    border: 2px none black;
+    display: flex;
+    justify-content: space-between;
+
+}
+.sidemenu{
+    border: 2px none black;
+    width: 200px;
+    display: flex;
+}
+.first{
+    border: 2px none black;
+    background-image: url(./assets/kw-background.png);
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    color: white;
+    padding: 50px;
+}
+.shop{
+    font-size: 100px;
+}
+.hash{
+    font-size: 40px;
+}
+.container{
+    border: 2px none black;
+
+}
+.itemname{
+    font-size: 30px;
+}
+.name{
+    font-size: 20px;
+    color: rgb(69, 68, 68);
+}
+.rupee{
+    border: 2px none black;
+    display: flex;
+    justify-content: space-between;
+}
+.add{
+    border: 2px none black;
+    border-radius: 5px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(115,141,255);
+    height: 40px;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.heading{
+    font-size: 50px;
+}
+.book{
+    display: flex;
+    justify-content: space-around;
+}
+.price{
+    font-size: 25px;
+}
+.store{
+    padding: 50px;
+}
